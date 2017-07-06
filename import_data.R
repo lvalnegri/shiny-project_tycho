@@ -11,7 +11,7 @@ dt <- fread(
 # delete states not actually part of US (apart from Puerto Rico)
 dt <- dt[!(state %in% c('AS', 'GU', 'MP', 'PT', 'VI'))]
 # remove records with missing counts
-dt <- dt[N > 0]
+dt <- dt[is.na(N)]
 # the file has different start/end dates for some weeks, which have been excluded from the query, so I sum N over all variables
 dt <- dt[, .(N = sum(N)), setdiff(names(dt), 'N')]
 # recode "is_state" and "event"
@@ -54,7 +54,7 @@ dt <- fread(
         key = 'week'
 )
 # remove records with missing counts
-dt <- dt[N > 0]
+dt <- dt[is.na(N)]
 # recode "is_state" 
 dt[, `:=`(is_state = as.numeric(is_state == 'STATE') )]
 # rename city of New York
