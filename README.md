@@ -1,6 +1,6 @@
 ## Project Tycho
 
-Extend [WSJ](http://wsj.com/) [Measles Vaccination Chart](http://graphics.wsj.com/infectious-diseases-and-vaccines/) as a Shiny app with multiple visualizations.
+Extend the [WSJ](http://wsj.com/) [Vaccination Charts](http://graphics.wsj.com/infectious-diseases-and-vaccines/) as a Shiny app with multiple visualizations.
 
 ### Credits
 
